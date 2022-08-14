@@ -11,4 +11,4 @@ npm run build
 
 mv build/* ../public_html/
 
-echo "Deployment finished!!"
+echo "Deployment finished!!!"
