@@ -3,14 +3,12 @@ set -e
 
 echo "Deployment started ..."
 
-git clone git@github.com:YuBil/react-google-auth.git
+git pull origin main
 
-cd react-google-auth
+npm install
 
 npm run build
 
-mv build/* ../
-
-rm -rf react-google-auth
+mv build/* ../public_html/
 
 echo "Deployment finished!"

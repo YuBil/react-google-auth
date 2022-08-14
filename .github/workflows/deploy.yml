@@ -21,4 +21,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_KEY }}
-          script: "cd /home/admin/web/driveua.top/public_html && ./scripts/deploy.sh"
+          script: "cd /home/admin/web/driveua.top/repo && ./scripts/deploy.sh"
