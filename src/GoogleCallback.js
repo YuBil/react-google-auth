@@ -2,6 +2,7 @@
 
 import React, {useState, useEffect} from 'react';
 import {useLocation} from "react-router-dom";
+import HOST from './config';
 
 function GoogleCallback() {
 
@@ -14,7 +15,7 @@ function GoogleCallback() {
     // and proxy them to /api/auth/callback on our Laravel API
     useEffect(() => {
 
-        fetch(`http://localhost:6969/v1/auth/google/callback${location.search}`, {
+        fetch(`${HOST}/v1/auth/google/callback${location.search}`, {
             headers : {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -32,7 +33,7 @@ function GoogleCallback() {
     // Helper method to fetch User data for authenticated user
     // Watch out for "Authorization" header that is added to this call
     function fetchUserData() {
-        fetch(`http://localhost:6969/v1/users/${data.user_id}`, {
+        fetch(`${HOST}/v1/users/${data.user_id}`, {
             headers : {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',

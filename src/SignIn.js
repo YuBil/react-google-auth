@@ -1,13 +1,14 @@
 // src/SignIn.js
 
 import React, {useState, useEffect} from 'react';
+import HOST from './config';
 
 function SignIn() {
 
     const [loginUrl, setLoginUrl] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:6969/v1/auth/google', {
+        fetch(`${HOST}/v1/auth/google`, {
             headers : {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
